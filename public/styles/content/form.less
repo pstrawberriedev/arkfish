@@ -1,0 +1,62 @@
+/*
+  Form
+  Namespace: #pageRegister
+*/
+
+//Site-Wide
+textarea, input[type=text] {
+  margin-bottom:1em;
+  width:100%;
+  min-height:200px;
+  padding:.5em;
+  font-size:1.5em;
+  outline:0;
+  border:1px solid #ddd;
+  background-color:#eee;
+  .transition(background-color .35s ease-in-out);
+  color:#222;
+  font-weight:normal;
+  &:hover {
+    background-color:#e5e5e5;
+  }
+}
+input[type=text] {
+  min-height:1px;
+}
+input[type=submit] {
+  width:100%;
+  padding:.5em 0;
+  font-size:2em;
+  background-color:rgba(255,0,255,.3);
+  border:0;
+  outline:0;
+  font-family:'Roboto', sans-serif;
+  font-weight:100;
+  cursor:pointer;
+}
+
+//Love Notes Page
+#pageRegister {
+  padding-top:100px;
+  h1 {
+    text-align:center;
+    margin:0 0 0.8em 0;
+    padding:0.1em 0 0 0;
+    span {color:#e35db6;}
+  }
+  .results {
+    text-align:center;
+    .items {
+      text-align:left;
+    }
+    span {
+      width:33%;
+      height:100px;
+      overflow:hidden;
+      float:left;
+      border:1px dotted #ccc;
+      display:block;
+      padding:6px;
+    }
+  }
+}

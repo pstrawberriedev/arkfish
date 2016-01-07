@@ -1,7 +1,7 @@
 var express = require('express');
 var request = require('request');
 var router = express.Router();
-var request = require('request');
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -13,7 +13,7 @@ router.get('/', function(req, res, next) {
 			console.log('Status: ' + arkInfo.status);
 		}
 	})
-  res.render('index', { title: 'Express', info: arkInfo });
+  res.render('home', { title: 'Arkfish', info: arkInfo });
 });
 
 module.exports = router;

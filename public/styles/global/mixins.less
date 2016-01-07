@@ -1,0 +1,98 @@
+/* 
+  Mixins
+*/
+
+// Weeeeeeee
+.border-radius(@border-radius) {
+	-webkit-border-radius: @border-radius;
+	-moz-border-radius: @border-radius;
+	border-radius: @border-radius;
+}
+.border-bottom-radius(@border-bottom-radius) {
+	-webkit-border-bottom-left-radius: @border-bottom-radius;
+	-moz-border-bottom-left-radius: @border-bottom-radius;
+	border-bottom-left-radius: @border-bottom-radius;
+	-webkit-border-bottom-right-radius: @border-bottom-radius;
+	-moz-border-bottom-right-radius: @border-bottom-radius;
+	border-bottom-right-radius: @border-bottom-radius;
+}
+.border-top-radius(@border-top-radius) {
+	-webkit-border-top-left-radius: @border-top-radius;
+	-moz-border-top-left-radius: @border-top-radius;
+	border-top-left-radius: @border-top-radius;
+	-webkit-border-top-right-radius: @border-top-radius;
+	-moz-border-top-right-radius: @border-top-radius;
+	border-top-right-radius: @border-top-radius;
+}
+.border-bottom-left-radius(@border-bottom-left-radius) {
+	-webkit-border-bottom-left-radius: @border-bottom-left-radius;
+	-moz-border-bottom-left-radius: @border-bottom-left-radius;
+	border-bottom-left-radius: @border-bottom-left-radius;
+}
+.border-bottom-right-radius(@border-bottom-right-radius) {
+	-webkit-border-bottom-right-radius: @border-bottom-right-radius;
+	-moz-border-bottom-right-radius: @border-bottom-right-radius;
+	border-bottom-right-radius: @border-bottom-right-radius;
+}
+.border-top-left-radius(@border-top-left-radius) {
+	-webkit-border-top-left-radius: @border-top-left-radius;
+	-moz-border-top-left-radius: @border-top-left-radius;
+	border-top-left-radius: @border-top-left-radius;
+}
+.border-top-right-radius(@border-top-right-radius) {
+	-webkit-border-top-right-radius: @border-top-right-radius;
+	-moz-border-top-right-radius: @border-top-right-radius;
+	border-top-right-radius: @border-top-right-radius;
+}
+.transition(@transition) {
+	-webkit-transition:@transition;
+	-moz-transition:@transition;
+	-o-transition:@transition;
+	transition:@transition;
+}
+.box-shadow (@box-shadow) {
+	-webkit-box-shadow: @box-shadow;
+	-moz-box-shadow: @box-shadow;
+	box-shadow: @box-shadow;
+}
+.box-shadows (@box-shadows,@box-shadowss) {
+	-webkit-box-shadow: @box-shadows,@box-shadowss;
+	-moz-box-shadow: @box-shadows,@box-shadowss;
+	box-shadow: @box-shadows,@box-shadowss;
+}
+.background-size (@background-size) {
+	-webkit-background-size: @background-size;
+	-moz-background-size: @background-size;
+	-o-background-size: @background-size;
+	background-size: @background-size;
+}
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: @opacity;
+	-moz-opacity: @opacity;
+	opacity: @opacity;
+}
+.box-sizing (@box-sizing) {
+    -moz-box-sizing: @box-sizing;
+    -webkit-box-sizing: @box-sizing;
+    box-sizing: @box-sizing;
+}
+
+
+/* Bootstrap Override Classes */
+.no-lr {padding-left:0; padding-right:0;} // Use on BS Columns
+.no-l {padding-left:0;}
+.no-r {padding-right:0;}
+.no-pull {margin-right:0; margin-left:0;} // Use on BS Rows
+
+/* Dumb Shit */
+h1,h2,h3,h4,h5,ul,li {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+.noSelect {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
