@@ -44,7 +44,7 @@ var $classicContent = $('#claInfo');
 var $vanillaContent = $('#vanInfo');
 var $unicornContent = $('#uniInfo');
 
-classicTrigger.on("click touchstart", function() {
+classicTrigger.click(function() {
   if(!$(this).hasClass('active')) {
     $(this).addClass('active');
     TweenLite.to($classicContent, 0.2, {height:120});
@@ -53,7 +53,7 @@ classicTrigger.on("click touchstart", function() {
     TweenLite.to($classicContent, 0.2, {height:0});
   }
 });
-vanillaTrigger.on("click touchstart", function() {
+vanillaTrigger.click(function() {
   if(!$(this).hasClass('active')) {
     $(this).addClass('active');
     TweenLite.to($vanillaContent, 0.2, {height:120});
@@ -62,7 +62,7 @@ vanillaTrigger.on("click touchstart", function() {
     TweenLite.to($vanillaContent, 0.2, {height:0});
   }
 });
-unicornTrigger.on("click touchstart", function() {
+unicornTrigger.click(function() {
   if(!$(this).hasClass('active')) {
     $(this).addClass('active');
     TweenLite.to($unicornContent, 0.2, {height:120});
