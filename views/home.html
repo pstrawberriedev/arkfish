@@ -2,6 +2,40 @@
   <section id="pageHome">
     <section class="container-fluid">
       
+      <!-- Unicorn Kingdom -->
+      <section class="row unicorn" id="uni">
+        <div class="col-sm-8 col-sm-push-2 darkBox">
+          <div class="status {{unicorn.status}}"></div>
+          <div class="drop">
+            +
+          </div>
+          <h4>Arkfish Unicorn Kingdom &nbsp;&nbsp;<span>{{unicorn.serverName}}</span></h4>
+        </div>
+      </section>
+      <section class="row" id="uniInfo">
+        <div class="col-sm-8 col-sm-push-2 lightBox">
+          <ul>
+            {{#unicorn}}
+            <li>
+              <span class="typcn typcn-user-outline"></span>
+              {{numberOfPlayers}}/{{maxNumberOfPlayers}}
+            </li>
+            <li>
+              <span class="typcn typcn-map"></span>
+              {{map}}
+            </li>
+            <li class="connect">
+              <a href="{{connectUrl}}">
+                <span class="typcn typcn-media-play-outline"></span>
+                Connect
+              </a>
+              
+            </li>
+            {{/unicorn}}
+          </ul>
+        </div>
+      </section>
+      
       <!-- Classic -->
       <section class="row classic" id="cla">
         <div class="col-sm-8 col-sm-push-2 darkBox">
@@ -66,40 +100,6 @@
               
             </li>
             {{/vanilla}}
-          </ul>
-        </div>
-      </section>
-      
-      <!-- Unicorn Kingdom -->
-      <section class="row unicorn" id="uni">
-        <div class="col-sm-8 col-sm-push-2 darkBox">
-          <div class="status {{unicorn.status}}"></div>
-          <div class="drop">
-            +
-          </div>
-          <h4>Arkfish Unicorn Kingdom &nbsp;&nbsp;<span>{{unicorn.serverName}}</span></h4>
-        </div>
-      </section>
-      <section class="row" id="uniInfo">
-        <div class="col-sm-8 col-sm-push-2 lightBox">
-          <ul>
-            {{#unicorn}}
-            <li>
-              <span class="typcn typcn-user-outline"></span>
-              {{numberOfPlayers}}/{{maxNumberOfPlayers}}
-            </li>
-            <li>
-              <span class="typcn typcn-map"></span>
-              {{map}}
-            </li>
-            <li class="connect">
-              <a href="{{connectUrl}}">
-                <span class="typcn typcn-media-play-outline"></span>
-                Connect
-              </a>
-              
-            </li>
-            {{/unicorn}}
           </ul>
         </div>
       </section>

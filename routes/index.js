@@ -13,48 +13,62 @@ var arkInfo = {};
   arkInfo.classic = {},
   arkInfo.vanilla = {};
 
-//Arkfish Unicorn Kingdom
-steamServerStatus.getServerStatus(
-  'arkfish.net', 27015, function(serverInfo) {
-    if (serverInfo.error) {
-      console.log(serverInfo.error);
-      arkInfo.unicorn.status = "off";
-    } else {
-      arkInfo.unicorn = serverInfo;
-      arkInfo.unicorn.status = "on";
-    }
-    return;
-});
+//Top-Level Function to pull into page GET
+function getServerInfo() {
 
-//Arkfish
-steamServerStatus.getServerStatus(
-  '162.251.70.210', 27066, function(serverInfo) {
-    if (serverInfo.error) {
-      console.log(serverInfo.error);
-      arkInfo.classic.status = "off";
-    } else {
-      arkInfo.classic = serverInfo;
-      arkInfo.classic.status = "on";
-    }
-    return;
-});
+  //Arkfish Unicorn Kingdom
+  function getUnicorn() {
+    steamServerStatus.getServerStatus(
+      'arkfish.net', 27015, function(serverInfo) {
+        if (serverInfo.error) {
+          console.log(serverInfo.error);
+          arkInfo.unicorn.status = "off";
+        } else {
+          arkInfo.unicorn = serverInfo;
+          arkInfo.unicorn.status = "on";
+        }
+    });
+  }
 
-//Arkfish Vanilla
-steamServerStatus.getServerStatus(
-  '149.202.195.144', 27057, function(serverInfo) {
-    if (serverInfo.error) {
-      console.log(serverInfo.error);
-      arkInfo.vanilla.status = "off";
-    } else {
-      arkInfo.vanilla = serverInfo;
-      arkInfo.vanilla.status = "on";
-    }
-    return;
-});
+  //Arkfish
+  function getClassic() {
+    steamServerStatus.getServerStatus(
+      '162.251.70.210', 27066, function(serverInfo) {
+        if (serverInfo.error) {
+          console.log(serverInfo.error);
+          arkInfo.classic.status = "off";
+        } else {
+          arkInfo.classic = serverInfo;
+          arkInfo.classic.status = "on";
+        }
+        return;
+    });
+  }
+
+  //Arkfish Vanilla
+  function getVanilla() {
+    steamServerStatus.getServerStatus(
+      '149.202.195.144', 27057, function(serverInfo) {
+        if (serverInfo.error) {
+          console.log(serverInfo.error);
+          arkInfo.vanilla.status = "off";
+        } else {
+          arkInfo.vanilla = serverInfo;
+          arkInfo.vanilla.status = "on";
+        }
+    });
+  }
+  
+  getUnicorn();
+  getClassic();
+  getVanilla();
+  
+}
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   
+  getServerInfo();
   console.log(arkInfo);
 
   res.render('home', { 
@@ -66,13 +80,3 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
-
-/*
-var arkInfo = {};
-request('https://api.ark.bar/v1/server/arkfish.net/27015', function (error, response, body) {
-  if (!error && response.statusCode == 200) {
-    var arkInfo = JSON.parse(body);
-    console.log('all\n' + body);
-    console.log('Status: ' + arkInfo.status);
-  }
-})*/
