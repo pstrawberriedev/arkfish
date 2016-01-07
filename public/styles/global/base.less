@@ -3,23 +3,37 @@
 */
 
 // Dumb Shit
-* {
+ul, li, p, h1, h2, h3, h4, h5 {
   -webkit-margin-before: 0px;
   -webkit-margin-after: 0px;
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
   -webkit-padding-start: 0px;
+  list-style-type:none;
 }
 
 // Global Setup
 html, body {
+  
 }
 
 body {
-  padding-top:130px;
+  padding-top:50px;
   background:#fafafa;
   margin:0;
 }
 
+// GSAP Accordion
+#claInfo, #vanInfo, #uniInfo {
+  height:0;
+  padding:0;
+  margin:0;
+  overflow:hidden;
+}
+#van, #cla, #uni {
+  cursor:default;
+}
 
 // Colors
+@purps: #651544;
+@pinks:#bd3987;
