@@ -3,52 +3,14 @@
   Namespace: #pageHome
 */
 #pageHome {
-  padding-top:100px;
-  text-align:center;
-  h1 {
-    text-align:center;
-    margin:0 0 0.8em 0;
-    padding:0.1em 0 0 0;
-    span {color:#e35db6;}
-  }
-  input[type=text] {
-    background:transparent;
-    border:0;
-    text-align:center;
-    font-weight:normal;
-    cursor:default;
-  }
-  .button {
-    width:250px;
-    height:250px;
-    display:inline-block;
-    .border-radius(50%);
-    border:1px solid #e35db6;
-    outline:0;
-    position:relative;
-    background:#fff;
-    cursor:pointer;
-    z-index:9999;
-    .noSelect;
-      a {
-        display:block;
-        position:absolute;
-        top:50%;
-        left:0;
-        right:0;
-        margin-top:-10px;
-      }
-  }
-  .results {
-    a {display:none;}
-    .result {
-      cursor:default;
-      border:1px solid #eee;
-      padding:15px;
-      font-size:.8em;
-        @media (max-width:550px) {
-          font-size:1em;
-        }
+  
+  .mainBox {
+    padding:1em;
+    background:rgba(20,10,20,.9);
+    .border-radius(2px);
+    h4 {
+      color:#fff;
+      font-weight:300;
     }
   }
 }

@@ -17,6 +17,7 @@
     "moment": "^2.10.6",
     "morgan": "~1.6.1",
     "request": "^2.67.0",
-    "serve-favicon": "~2.3.0"
+    "serve-favicon": "~2.3.0",
+    "steam-server-status": "^1.0.2"
   }
 }
