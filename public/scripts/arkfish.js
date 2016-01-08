@@ -41,12 +41,6 @@ var $classicContent = $('#claInfo');
 var $vanillaContent = $('#vanInfo');
 var $unicornContent = $('#uniInfo');
 
-$(window).load(function() {
-  $classicContent.slideToggle()
-  $vanillaContent.slideToggle();
-  $unicornContent.slideToggle();
-});
-
 classicTrigger.click(function() {$classicContent.slideToggle();});
 vanillaTrigger.click(function() {$vanillaContent.slideToggle();});
 unicornTrigger.click(function() {$unicornContent.slideToggle();});
