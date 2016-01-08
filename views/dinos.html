@@ -1,0 +1,68 @@
+{{> header}}
+
+  <section class="container-fluid" id="pageDinos">
+
+    <section class="row">
+      <div class="col-sm-12">
+        <h1><span>Arkfish Dino Friends</span></h1>
+      </div>
+    </section>
+    
+    <section class="row">
+      <div class="col-sm-12">
+        <form method="post">
+          <!-- Server -->
+          <h4>Dino's Residence</h4>
+          <select name="dinoServer" id="dinoServer">
+            <option value="null" selected>Select Server</option>
+            <option value="unicornkingdom">Unicorn Kingdom</option>
+            <option value="classic">Classic</option>
+            <option value="classic">Vanilla</option>
+          </select>
+          <!-- Name -->
+          <h4>Name</h4>
+          <input type="text" id="dinoName" name="dinoName" />
+          <!-- Species -->
+          <h4>Species</h4>
+          <select name="dinoSpecies" id="dinoSpecies">
+            <option value="null" selected>Select Species</option> 
+            <option value="value2">Argentavis</option>
+            <option value="value3">Dingdongacus</option>
+          </select>
+          <!-- Owner -->
+          <h4>Owner</h4>
+          <input type="text" id="dinoOwner" name="dinoOwner" />
+          <!-- Mortality -->
+          <h4>Mortality</h4>
+          <select name="dinoMortality" id="dinoMortality">
+            <option value="living" selected>Living</option> 
+            <option value="deceased">Deceased</option>
+          </select>
+          <!-- Notes -->
+          <h4>Notes</h4>
+          <textarea id="dinoNotes" name="dinoNotes"></textarea>
+          <!-- Submit! -->
+          <input type="submit" value="Add Dino">
+        </form>
+      </div>
+    </section>
+    <section class="row results">
+      <h4>All Dinos:</h4><br />
+      <div class="col-sm-12 items">
+        {{#dinos}}
+        <div class="singleDino">
+          <div class="name">{{name}}</div>
+          <div class="species">Species: {{species}}</div>
+          <div class="owner">Owner: {{owner}}</div>
+          <div class="mortality">Mortality: {{mortality}}</div>
+          <div class="notes">Notes: {{notes}}</div>
+          <div class="added">Added: <span></span></div>
+          <span class="datePop" style="display:none;">{{dateAdded}}</span>
+        </div>
+        {{/dinos}}
+      </div>
+    </section>
+
+  </section>
+
+{{> footer}}

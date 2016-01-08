@@ -123,17 +123,17 @@ function getServerInfo() {
 }
 
 //Get Initial Infoz (doesn't actually work. oh.)
-getServerInfo();
+//getServerInfo();
 
 //Ghetto cron every 45sec to update server infoz so it doesn't time out
-//new CronJob('*/45 * * * * *', function() { //Prod
-new CronJob('*/45 * * * * *', function() { //TEST
-  getServerInfo();
-  console.log('--------------------------');
-  console.log('--------Got Info----------');
-  console.log('--------------------------');
-  console.log(arkInfo);
-}, null, true, 'America/Denver');
+
+//new CronJob('*/45 * * * * *', function() {
+//  getServerInfo();
+//  console.log('--------------------------');
+//  console.log('--------Got Info----------');
+//  console.log('--------------------------');
+//  console.log(arkInfo);
+//}, null, true, 'America/Denver');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

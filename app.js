@@ -4,6 +4,7 @@
 
 // Require Core
 //~~~~~~~~~~~~~~~~~~~~~~~
+require('./database');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -22,6 +23,7 @@ var lessMiddleware = require('less-middleware');
 // Require Routes
 //~~~~~~~~~~~~~~~~~~~~~~~
 var routes = require('./routes/index');
+var dinos = require('./routes/dinos');
 
 // Call Express
 //~~~~~~~~~~~~~~~~~~~~~~~
@@ -57,6 +59,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Do the routes
 //~~~~~~~~~~~~~~~~~~~~~~~
 app.use('/', routes);
+app.use('/dinos', dinos);
 
 
 // If no routes
