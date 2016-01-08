@@ -2,24 +2,22 @@
   arkfish.js
 */
 $(document).ready(function() {
-  console.log('--> arkfish.js');
-});
-
-// Flowtype Init
-// http://simplefocus.com/flowtype/
-$('body').flowtype({
-   minimum   : 320,
-   maximum   : 1980,
-   minFont   : 10,
-   maxFont   : 20,
-   fontRatio : 30
-});
-
-// Grab Server version with regex
-$(document).ready(function() {
   
+  //Hello
+  console.log('--> arkfish.js');
+  
+  // Flowtype Init
+  // http://simplefocus.com/flowtype/
+  $('body').flowtype({
+     minimum   : 320,
+     maximum   : 1980,
+     minFont   : 10,
+     maxFont   : 20,
+     fontRatio : 30
+  });
+  
+  // Grab Server version with regex
   function grabServerVersion() {
-    
     var replaceString = $('h4 span');
     replaceString.each(function() {
       if($(this).text().length) {
@@ -33,6 +31,13 @@ $(document).ready(function() {
     })
   }
   grabServerVersion();
+  
+  //Format Players Array
+  $('.users a').each(function() {
+    var playersArray = $(this);
+    var playersFormatted = playersArray.text().split(",").join(" // ");
+    playersArray.text(playersFormatted);
+  });
   
 });
 

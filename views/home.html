@@ -3,106 +3,122 @@
     <section class="container-fluid">
       
       <!-- Unicorn Kingdom -->
+      <!-- Basic -->
       <section class="row unicorn" id="uni">
         <div class="col-sm-8 col-sm-push-2 darkBox">
           <div class="status {{unicorn.status}}"></div>
           <div class="drop">
             +
           </div>
-          <h4>Arkfish Unicorn Kingdom &nbsp;&nbsp;<span>{{unicorn.serverName}}</span></h4>
+          <h4>Arkfish Unicorn Kingdom&nbsp;
+            <a>({{unicorn.numberOfPlayers}}/{{unicorn.maxNumberOfPlayers}})</a>
+            <span>{{unicorn.serverName}}</span>
+          </h4>
         </div>
       </section>
+      <!-- Details -->
       <section class="row" id="uniInfo">
         <div class="col-sm-8 col-sm-push-2 lightBox">
           <ul>
             {{#unicorn}}
-            <li>
+            <li class="users">
               <span class="typcn typcn-user-outline"></span>
-              {{numberOfPlayers}}/{{maxNumberOfPlayers}}
+              <a>{{players}}</a>
             </li>
             <li>
               <span class="typcn typcn-map"></span>
-              {{map}}
+              {{map}}<br />
+              04:15
             </li>
             <li class="connect">
               <a href="{{connectUrl}}">
                 <span class="typcn typcn-media-play-outline"></span>
                 Connect
               </a>
-              
             </li>
             {{/unicorn}}
           </ul>
         </div>
-      </section>
+      </section><!-- End Unicorn -->
       
       <!-- Classic -->
+      <!-- Basic -->
       <section class="row classic" id="cla">
         <div class="col-sm-8 col-sm-push-2 darkBox">
           <div class="status {{classic.status}}"></div>
           <div class="drop">
             +
           </div>
-          <h4>Arkfish Classic &nbsp;&nbsp;<span>{{classic.serverName}}</span></h4>
+          <h4>
+            Arkfish Classic&nbsp;
+            <span>{{classic.serverName}}</span>
+            <a>({{classic.numberOfPlayers}}/{{classic.maxNumberOfPlayers}})</a>
+          </h4>
         </div>
       </section>
+      <!-- Details -->
       <section class="row" id="claInfo">
         <div class="col-sm-8 col-sm-push-2 lightBox">
           <ul>
             {{#classic}}
-            <li>
+            <li class="users">
               <span class="typcn typcn-user-outline"></span>
-              {{numberOfPlayers}}/{{maxNumberOfPlayers}}
+              <a>{{players}}</a>
             </li>
             <li>
               <span class="typcn typcn-map"></span>
-              {{map}}
+              {{map}}<br />
+              04:15
             </li>
             <li class="connect">
               <a href="{{connectUrl}}">
                 <span class="typcn typcn-media-play-outline"></span>
                 Connect
               </a>
-              
             </li>
             {{/classic}}
           </ul>
         </div>
-      </section>
+      </section><!-- End Classic -->
       
       <!-- Vanilla -->
+      <!-- Basic -->
       <section class="row vanilla" id="van">
         <div class="col-sm-8 col-sm-push-2 darkBox">
           <div class="status {{vanilla.status}}"></div>
           <div class="drop">
             +
           </div>
-          <h4>Arkfish Vanilla &nbsp;&nbsp;<span>{{vanilla.serverName}}</span></h4>
+          <h4>Arkfish Vanilla&nbsp;
+            <span>{{vanilla.serverName}}</span>
+            <a>({{vanilla.numberOfPlayers}}/{{vanilla.maxNumberOfPlayers}})</a>
+          </h4>
         </div>
       </section>
+      <!-- Details -->
       <section class="row" id="vanInfo">
         <div class="col-sm-8 col-sm-push-2 lightBox">
           <ul>
             {{#vanilla}}
-            <li>
+            <li class="users">
               <span class="typcn typcn-user-outline"></span>
-              {{numberOfPlayers}}/{{maxNumberOfPlayers}}
+              <a>{{players}}</a>
             </li>
             <li>
               <span class="typcn typcn-map"></span>
-              {{map}}
+              {{map}}<br />
+              04:15
             </li>
             <li class="connect">
               <a href="{{connectUrl}}">
                 <span class="typcn typcn-media-play-outline"></span>
                 Connect
               </a>
-              
             </li>
             {{/vanilla}}
           </ul>
         </div>
-      </section>
+      </section><!-- End Vanilla -->
       
     </section>
 </section>

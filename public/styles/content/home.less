@@ -3,6 +3,11 @@
   Namespace: #pageHome
 */
 #pageHome {
+  //disable user select ok
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   
   .darkBox {
     padding:1em;
@@ -33,12 +38,16 @@
     font-size:1.4em;
     margin-left:1.4em;
     font-weight:100;
+    margin-right:0;
     span {
       display:none;
       position:absolute;
       right:1.18em;
       top:1.34em;
       font-size:.7em;
+    }
+    a {
+      color:#aaa;
     }
   }
   .drop {
@@ -76,10 +85,16 @@
           width:50%
         }
       }
+      .users {
+        text-align:left;
+        overflow-y:auto;
+        span {font-size:1em;}
+        a {font-size:.65em;}
+      }
       .connect {
         @media (max-width:1024px) {display:none;}
       }
       
-    span {font-size:2em;}
+    span {font-size:1.5em;}
   }
 }
