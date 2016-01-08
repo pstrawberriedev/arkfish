@@ -36,18 +36,13 @@ function getServerInfo() {
     sq.open('arkfish.net', 27015);
     sq.getPlayers(function(err, players){
       if(err) {
-        arkInfo.unicorn.players = err;
+        console.log(err);
       } else {
         //setup players to be array
         arkInfo.unicorn.players = [];
-        var playersArray = arkInfo.unicorn.players;
-        //do the loop
-        for (var key in players) {
-          if (players.hasOwnProperty(key)) {
-            var allPlayers = players[key].name;
-            playersArray.push(allPlayers);
-          }
-        }
+        players.forEach(function(player){
+          arkInfo.unicorn.players.push(player.name);
+        });
       }
     });
   }
@@ -120,20 +115,23 @@ function getServerInfo() {
     });
   }
   
+  //Run the sub-funx lol
   getUnicorn();
   getClassic();
   getVanilla();
   
 }
 
-//Call cron every 45sec to update server infoz
+//Get Initial Infoz (doesn't actually work. oh.)
 getServerInfo();
+
+//Ghetto cron every 45sec to update server infoz so it doesn't time out
 new CronJob('*/45 * * * * *', function() {
   getServerInfo();
   console.log('--------------------------');
   console.log('--------Got Info----------');
   console.log('--------------------------');
-  console.log(arkInfo);
+  console.log(arkInfo.unicorn);
 }, null, true, 'America/Denver');
 
 /* GET home page. */

@@ -52,7 +52,7 @@ var $unicornContent = $('#uniInfo');
 classicTrigger.click(function() {
   if(!$(this).hasClass('active')) {
     $(this).addClass('active');
-    TweenLite.to($classicContent, 0.2, {height:120});
+    TweenLite.to($classicContent, 0.2, {height:135});
   } else {
     $(this).removeClass('active');
     TweenLite.to($classicContent, 0.2, {height:0});
@@ -61,7 +61,7 @@ classicTrigger.click(function() {
 vanillaTrigger.click(function() {
   if(!$(this).hasClass('active')) {
     $(this).addClass('active');
-    TweenLite.to($vanillaContent, 0.2, {height:120});
+    TweenLite.to($vanillaContent, 0.2, {height:135});
   } else {
     $(this).removeClass('active');
     TweenLite.to($vanillaContent, 0.2, {height:0});
@@ -70,7 +70,7 @@ vanillaTrigger.click(function() {
 unicornTrigger.click(function() {
   if(!$(this).hasClass('active')) {
     $(this).addClass('active');
-    TweenLite.to($unicornContent, 0.2, {height:120});
+    TweenLite.to($unicornContent, 0.2, {height:135});
   } else {
     $(this).removeClass('active');
     TweenLite.to($unicornContent, 0.2, {height:0});

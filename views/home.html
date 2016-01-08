@@ -23,12 +23,14 @@
             {{#unicorn}}
             <li class="users">
               <span class="typcn typcn-user-outline"></span>
-              <a>{{players}}</a>
+              {{#players}}
+                <a>{{.}}</a>
+              {{/players}}
             </li>
             <li>
               <span class="typcn typcn-map"></span>
               {{map}}<br />
-              04:15
+              <!--{{time}}-->
             </li>
             <li class="connect">
               <a href="{{connectUrl}}">
@@ -68,7 +70,7 @@
             <li>
               <span class="typcn typcn-map"></span>
               {{map}}<br />
-              04:15
+              <!--{{time}}-->
             </li>
             <li class="connect">
               <a href="{{connectUrl}}">
@@ -107,7 +109,7 @@
             <li>
               <span class="typcn typcn-map"></span>
               {{map}}<br />
-              04:15
+              <!--{{time}}-->
             </li>
             <li class="connect">
               <a href="{{connectUrl}}">

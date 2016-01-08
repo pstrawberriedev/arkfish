@@ -87,9 +87,15 @@
       }
       .users {
         text-align:left;
-        overflow-y:auto;
         span {font-size:1em;}
-        a {font-size:.65em;}
+        a {
+          display:inline-block;
+          padding:.5em;
+          .border-radius(1px);
+          .box-shadow(0px 1px 1px 0px rgba(0,0,0,0.05));
+          background:rgba(200,50,200,.3);
+          font-size:.65em;
+        }
       }
       .connect {
         @media (max-width:1024px) {display:none;}
