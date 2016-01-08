@@ -3,7 +3,9 @@
 */
 header {
   width:100%;
-  font-size:1.5em;
+  height:2em;
+  overflow:hidden;
+  font-size:1em;
   color:#ccc;
   clear:both;
   position:absolute;
@@ -14,44 +16,45 @@ header {
   display:block;
   text-align:center;
   z-index:300;
-  .transition(top .2s ease-in-out);
-  &.on {
-    top:0;
+  @media (max-width:550px) {
+    height:3.3em;
   }
   img {
     max-width:100px;
     height:auto;
     position:relative;
-    display:inline-block;;
+    display:inline-block;
     margin-top:8px;
     margin-right:15px;
   }
   #github {
-    float:right;
+    position:absolute;
     display:block;
-    font-size:1.2em;
-    margin-top:-5px;
+    right:5px;
+    top:-3px;
+    font-size:1.8em;
     color:#aaa;
     font-weight:normal;
+    @media (max-width:550px) {
+      top:-1px;
+    }
   }
-  /*
-  a {
-    font-size:34px;
-    display:inline-block;
-    cursor:pointer;
-    padding:3px 8px 7px 8px;
-    margin:0 4px;
-    border:1px solid #eee;
-    .border-radius(50%);
-    .transition(all .3s ease-in-out);
-    &:hover {
-      color:#e35db6;
-      background-color:rgba(255,0,255,.1);
+  .motds {
+    position:relative;
+    display:block;
+    text-align:left;
+    padding-left:.2em;
+    font-size:1em;
+    color:#aaa;
+    a {
+      margin-top:5px;
+      display:block;
+      font-size:.65em;
+      @media (max-width:550px) {
+        font-size:1.1em;
+      }
     }
-    @media (max-width:500px) {
-      font-size:36px;
-    }
-  }*/
+  }
 }
 
 #logo {

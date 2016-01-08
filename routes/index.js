@@ -127,12 +127,12 @@ getServerInfo();
 
 //Ghetto cron every 45sec to update server infoz so it doesn't time out
 //new CronJob('*/45 * * * * *', function() { //Prod
-new CronJob('*/90 * * * * *', function() { //TEST
+new CronJob('*/45 * * * * *', function() { //TEST
   getServerInfo();
   console.log('--------------------------');
   console.log('--------Got Info----------');
   console.log('--------------------------');
-  console.log(arkInfo.unicorn);
+  console.log(arkInfo);
 }, null, true, 'America/Denver');
 
 /* GET home page. */
