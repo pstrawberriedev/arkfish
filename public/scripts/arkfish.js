@@ -31,14 +31,6 @@ $(document).ready(function() {
     })
   }
   grabServerVersion();
-  
-  //Format Players Array
-  $('.users a').each(function() {
-    var playersArray = $(this);
-    var playersFormatted = playersArray.text().split(",").join(" // ");
-    playersArray.text(playersFormatted);
-  });
-  
 });
 
 // Server Accordions GSAP (YES I KNOW IT'S REALLY GHETTO AND BAD OK)
@@ -49,30 +41,12 @@ var $classicContent = $('#claInfo');
 var $vanillaContent = $('#vanInfo');
 var $unicornContent = $('#uniInfo');
 
-classicTrigger.click(function() {
-  if(!$(this).hasClass('active')) {
-    $(this).addClass('active');
-    TweenLite.to($classicContent, 0.2, {height:135});
-  } else {
-    $(this).removeClass('active');
-    TweenLite.to($classicContent, 0.2, {height:0});
-  }
+$(window).load(function() {
+  $classicContent.slideToggle()
+  $vanillaContent.slideToggle();
+  $unicornContent.slideToggle();
 });
-vanillaTrigger.click(function() {
-  if(!$(this).hasClass('active')) {
-    $(this).addClass('active');
-    TweenLite.to($vanillaContent, 0.2, {height:135});
-  } else {
-    $(this).removeClass('active');
-    TweenLite.to($vanillaContent, 0.2, {height:0});
-  }
-});
-unicornTrigger.click(function() {
-  if(!$(this).hasClass('active')) {
-    $(this).addClass('active');
-    TweenLite.to($unicornContent, 0.2, {height:135});
-  } else {
-    $(this).removeClass('active');
-    TweenLite.to($unicornContent, 0.2, {height:0});
-  }
-});
+
+classicTrigger.click(function() {$classicContent.slideToggle();});
+vanillaTrigger.click(function() {$vanillaContent.slideToggle();});
+unicornTrigger.click(function() {$unicornContent.slideToggle();});

@@ -5,7 +5,7 @@
       <!-- Unicorn Kingdom -->
       <!-- Basic -->
       <section class="row unicorn" id="uni">
-        <div class="col-sm-8 col-sm-push-2 darkBox">
+        <div class="col-sm-12 darkBox">
           <div class="status {{unicorn.status}}"></div>
           <div class="drop">
             +
@@ -18,35 +18,33 @@
       </section>
       <!-- Details -->
       <section class="row" id="uniInfo">
-        <div class="col-sm-8 col-sm-push-2 lightBox">
-          <ul>
+        <div class="col-sm-12 lightBox">
             {{#unicorn}}
-            <li class="users">
-              <span class="typcn typcn-user-outline"></span>
+            <div class="users">
+              <span class="typcn typcn-user"></span>
               {{#players}}
-                <a>{{.}}</a>
+                <div class="user">{{.}}</div>
               {{/players}}
-            </li>
-            <li>
+            </div>
+            <div class="map">
               <span class="typcn typcn-map"></span>
               {{map}}<br />
               <!--{{time}}-->
-            </li>
-            <li class="connect">
+            </div>
+            <div class="connect">
               <a href="{{connectUrl}}">
-                <span class="typcn typcn-media-play-outline"></span>
-                Connect
+                <span class="typcn typcn-media-play"></span>
+                Connect&nbsp;
               </a>
-            </li>
+            </div>
             {{/unicorn}}
-          </ul>
         </div>
       </section><!-- End Unicorn -->
       
       <!-- Classic -->
       <!-- Basic -->
       <section class="row classic" id="cla">
-        <div class="col-sm-8 col-sm-push-2 darkBox">
+        <div class="col-sm-12 darkBox">
           <div class="status {{classic.status}}"></div>
           <div class="drop">
             +
@@ -59,34 +57,34 @@
         </div>
       </section>
       <!-- Details -->
-      <section class="row" id="claInfo">
-        <div class="col-sm-8 col-sm-push-2 lightBox">
-          <ul>
+      <section class="row active" id="claInfo">
+        <div class="col-sm-12 lightBox">
             {{#classic}}
-            <li class="users">
-              <span class="typcn typcn-user-outline"></span>
-              <a>{{players}}</a>
-            </li>
-            <li>
+            <div class="users">
+              <span class="typcn typcn-user"></span>
+              {{#players}}
+                <div class="user">{{.}}</div>
+              {{/players}}
+            </div>
+            <div class="map">
               <span class="typcn typcn-map"></span>
               {{map}}<br />
               <!--{{time}}-->
-            </li>
-            <li class="connect">
+            </div>
+            <div class="connect">
               <a href="{{connectUrl}}">
-                <span class="typcn typcn-media-play-outline"></span>
-                Connect
+                <span class="typcn typcn-media-play"></span>
+                Connect&nbsp;
               </a>
-            </li>
+            </div>
             {{/classic}}
-          </ul>
         </div>
       </section><!-- End Classic -->
       
       <!-- Vanilla -->
       <!-- Basic -->
       <section class="row vanilla" id="van">
-        <div class="col-sm-8 col-sm-push-2 darkBox">
+        <div class="col-sm-12 darkBox">
           <div class="status {{vanilla.status}}"></div>
           <div class="drop">
             +
@@ -99,26 +97,26 @@
       </section>
       <!-- Details -->
       <section class="row" id="vanInfo">
-        <div class="col-sm-8 col-sm-push-2 lightBox">
-          <ul>
+        <div class="col-sm-12 lightBox">
             {{#vanilla}}
-            <li class="users">
-              <span class="typcn typcn-user-outline"></span>
-              <a>{{players}}</a>
-            </li>
-            <li>
+            <div class="users">
+              <span class="typcn typcn-user"></span>
+              {{#players}}
+                <div class="user">{{.}}</div>
+              {{/players}}
+            </div>
+            <div class="map">
               <span class="typcn typcn-map"></span>
               {{map}}<br />
               <!--{{time}}-->
-            </li>
-            <li class="connect">
+            </div>
+            <div class="connect">
               <a href="{{connectUrl}}">
-                <span class="typcn typcn-media-play-outline"></span>
-                Connect
+                <span class="typcn typcn-media-play"></span>
+                Connect&nbsp;
               </a>
-            </li>
+            </div>
             {{/vanilla}}
-          </ul>
         </div>
       </section><!-- End Vanilla -->
       
