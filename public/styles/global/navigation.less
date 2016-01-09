@@ -3,7 +3,7 @@
 */
 header {
   width:100%;
-  height:2em;
+  height:115px;
   overflow:hidden;
   font-size:1em;
   color:#ccc;
@@ -14,56 +14,54 @@ header {
   left:0;
   right:0;
   display:block;
-  text-align:center;
+  text-align:right;
   z-index:300;
-  @media (max-width:550px) {
-    height:3.3em;
-  }
   img {
-    max-width:100px;
-    height:auto;
-    position:relative;
-    display:inline-block;
-    margin-top:8px;
-    margin-right:15px;
-  }
-  #github {
     position:absolute;
-    display:block;
-    right:5px;
-    top:-3px;
-    font-size:1.8em;
-    color:#aaa;
-    font-weight:normal;
-    @media (max-width:550px) {
-      top:-1px;
-    }
-  }
-  .motds {
-    position:relative;
-    display:block;
-    text-align:left;
-    padding-left:.2em;
-    font-size:1em;
-    color:#666;
-    a {
-      margin-top:5px;
-      display:block;
-      font-size:.65em;
-      @media (max-width:550px) {
-        font-size:1.1em;
-      }
-    }
+    left:50%;
+    top:10px;
+    margin-left:-62px;
+    width:124px;
+    height:90px;
+    height:auto;
+    cursor:pointer;
   }
 }
 
-#logo {
-  position:fixed;
-  width:100%;
-  text-align:center;
-  margin:0 auto;
+nav {
+  display:none;
+  position:absolute;
   left:0;
+  top:0;
   right:0;
-  bottom:1em;
-  z-index:-1;
+  background:rgba(255,255,255,.93);
+  color:#222;
+  z-index:900;
+  font-size:1.3em;
+  ul {
+    position:relative;
+    display:block;
+    padding-bottom:.4em;
+    &.github {
+      margin-top:1em;
+      border-bottom:1px solid #999;
+      border-top:1px solid #999;
+    }
+    li {
+      display:block;
+      text-align:center;
+      a {
+        width:100%;
+        padding:.1em .5em;
+        display:block;
+        &:first-child {
+          padding-top:.5em;
+        }
+      }
+    }
+    span {margin-right:.2em;}
+  }
+  @media (max-width:550px) {
+    font-size:2em;
+  }
 }

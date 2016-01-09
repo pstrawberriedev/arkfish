@@ -17,14 +17,47 @@ html, body {
   
 }
 
-body {
-  padding-top:2.3em;
-  background:#f0f0f0;
-  margin:0;
-  @media (max-width:550px) {
-    padding-top:3.5em;
-  }
+html {
+  width:100%;
+  height:100%;
 }
+
+body {
+  width:100%;
+  height:100%;
+  padding-top:110px;
+  background:transparent;
+  margin:0;
+}
+
+#background {
+  width:100%;
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  height:100vh;
+  z-index:-2;
+  background:transparent url(../images/arkmesh.jpg) no-repeat center center;
+  background-position:fixed;
+  .background-size(cover);
+}
+
+#overlay {
+  display:none;
+  width:100%;
+  height:100%;
+  position:fixed;
+  z-index:10;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  background:rgba(1,1,1,.78);
+}
+
+
 
 // GSAP Accordion
 

@@ -16,6 +16,19 @@ $(document).ready(function() {
      fontRatio : 30
   });
   
+  //Nav
+  var navTrigger = $('header img'),
+      navContent = $('nav');
+  navTrigger.click(function() {
+    navContent.toggleClass('active');
+    navContent.slideToggle();
+  });
+  $("html").click(function(e){
+    if($(e.target).closest(navTrigger).length === 0) {
+      $("nav:visible").slideUp();
+    }
+});
+  
   if($('#pageHome').length) {
     // Grab Server version with regex
     function grabServerVersion() {
@@ -36,12 +49,17 @@ $(document).ready(function() {
 });
 
 // Server Status Accordions
-$('#cla').click(function() {$('#claInfo').slideToggle();});
-$('#van').click(function() {$('#vanInfo').slideToggle();});
-$('#uni').click(function() {$('#uniInfo').slideToggle();});
+$('#cla').click(function() {$('#claInfo').slideToggle(180);});
+$('#van').click(function() {$('#vanInfo').slideToggle(180);});
+$('#uni').click(function() {$('#uniInfo').slideToggle(180);});
 
-// Dino Glossary
-$('#pageDinos .singleDino').each(function() {
+// Dino Glossary New Dino
+$('#addDino').click(function() {
+  $('#newDino').slideToggle();
+});
+
+// Dino Glossary Dates
+$('.singleDino').each(function() {
   var fillDate = $(this).find('.added span');
   var dateElement = $(this).find('.datePop');
   

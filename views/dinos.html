@@ -1,23 +1,23 @@
 {{> header}}
-
   <section class="container-fluid" id="pageDinos">
-
+    
     <section class="row">
-      <div class="col-sm-12">
-        <h1><span>Arkfish Dino Friends</span></h1>
+      <div class="col-sm-12 title">
+        <h3>Arkfish Dino Friends</h3>
+        <div id="addDino">Add New Dino</div>
       </div>
     </section>
     
-    <section class="row">
-      <div class="col-sm-12">
+    <section class="row" id="newDino">
+      <div class="col-sm-8 col-sm-push-2">
         <form method="post">
           <!-- Server -->
           <h4>Dino's Residence</h4>
           <select name="dinoServer" id="dinoServer">
             <option value="null" selected>Select Server</option>
-            <option value="unicornkingdom">Unicorn Kingdom</option>
-            <option value="classic">Classic</option>
-            <option value="classic">Vanilla</option>
+            <option value="unicornkingdom">Arkfish Unicorn Kingdom</option>
+            <option value="classic">Arkfish Classic</option>
+            <option value="classic">Arkfish Vanilla</option>
           </select>
           <!-- Name -->
           <h4>Name</h4>
@@ -47,19 +47,23 @@
       </div>
     </section>
     <section class="row results">
-      <h4>All Dinos:</h4><br />
       <div class="col-sm-12 items">
-        {{#dinos}}
-        <div class="singleDino">
-          <div class="name">{{name}}</div>
-          <div class="species">Species: {{species}}</div>
-          <div class="owner">Owner: {{owner}}</div>
-          <div class="mortality">Mortality: {{mortality}}</div>
-          <div class="notes">Notes: {{notes}}</div>
-          <div class="added">Added: <span></span></div>
-          <span class="datePop" style="display:none;">{{dateAdded}}</span>
+        <div class="row">
+          {{#dinos}}
+            <div class="col-sm-4">
+              <div class="singleDino darkBox">
+                <div class="name">{{name}}</div>
+                <div class="species">Species: {{species}}</div>
+                <div class="server">Server: {{server}}</div>
+                <div class="owner">Owner: {{owner}}</div>
+                <div class="mortality">Mortality: {{mortality}}</div>
+                <div class="notes">Notes: {{notes}}</div>
+                <div class="added">Added: <span></span></div>
+                <span class="datePop" style="display:none;">{{dateAdded}}</span>
+              </div>
+            </div>
+          {{/dinos}}
         </div>
-        {{/dinos}}
       </div>
     </section>
 

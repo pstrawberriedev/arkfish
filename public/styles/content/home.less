@@ -4,19 +4,10 @@
 */
 #pageHome {
   
+  //
+  // Server Status
+  
   .map {display:none;}
-  .darkBox {
-    padding:1em;
-    text-align:left;
-    margin-bottom:2px;
-    background:rgba(1,1,1,.8);
-  }
-  .lightBox {
-    padding-bottom:5px;
-    padding-left:0;
-    padding-right:0;
-    min-height:100px;
-  }
   .status {
     position:absolute;
     display:block;
@@ -107,4 +98,66 @@
   #vanInfo {display:none;}
   #uniInfo {display:none;}
   
+  //
+  // Site Features
+  
+  #features {
+    .darkBox {
+      cursor:default;
+    }
+    h4 {
+      margin-left:0;
+      margin-bottom:.4em;
+      border-bottom:1px dotted #333;
+    }
+    
+    #news {
+      padding-left:0;
+      padding-right:0;
+      font-weight:400;
+      margin-bottom:1.2em;
+      @media(min-width:769px) {
+        padding-right:15px;
+        margin-bottom:0;
+      }
+      .lightBox {
+        padding:0;
+      }
+      ul {
+        margin-bottom:.6em;
+      }
+      li {
+        font-family:monospace;
+        padding:.5em;
+        display:inline-block;
+        color:#f0f0f0;
+        &.date {
+          background:transparent;
+          color:#eee;
+          background:rgba(255,255,255,.1);
+        }
+      }
+    }
+    
+    #dinos {
+      padding-left:0;
+      padding-right:0;
+      @media(min-width:769px) {padding-left:15px;}
+    }
+    
+  }
+  
 }
+
+  .darkBox {
+    padding:1em;
+    text-align:left;
+    border:1px dotted #111;
+    background:rgba(1,1,1,.9);
+    cursor:pointer;
+    color:#fff;
+  }
+  .lightBox {
+    padding:10px;
+    background:rgba(255,255,255,.7);
+  }
