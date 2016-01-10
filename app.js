@@ -4,7 +4,7 @@
 
 // Require Core
 //~~~~~~~~~~~~~~~~~~~~~~~
-require('./database');
+//require('./database');
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -23,7 +23,7 @@ var lessMiddleware = require('less-middleware');
 // Require Routes
 //~~~~~~~~~~~~~~~~~~~~~~~
 var routes = require('./routes/index');
-var dinos = require('./routes/dinos');
+//var dinos = require('./routes/dinos');
 
 // Call Express
 //~~~~~~~~~~~~~~~~~~~~~~~
@@ -47,19 +47,24 @@ hbsutils.registerWatchedPartials(path.join(__dirname + '/views/partials'));
 
 // Use some shit!
 //~~~~~~~~~~~~~~~~~~~~~~~
+//Favicon
 app.use(favicon(path.join(__dirname, 'public', 'favicon.png')));
+//Logger
 app.use(logger('dev'));
-app.use(lessMiddleware(path.join(__dirname + '/public')));
+//Body/Cookie Parsing
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+//LESS Middleware
+app.use(lessMiddleware(path.join(__dirname + '/public')));
+//Static files
 app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Do the routes
 //~~~~~~~~~~~~~~~~~~~~~~~
 app.use('/', routes);
-app.use('/dinos', dinos);
+//app.use('/dinos', dinos);
 
 
 // If no routes

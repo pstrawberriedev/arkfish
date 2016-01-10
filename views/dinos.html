@@ -10,7 +10,7 @@
     
     <section class="row" id="newDino">
       <div class="col-sm-8 col-sm-push-2">
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
           <!-- Server -->
           <h4>Dino's Residence</h4>
           <select name="dinoServer" id="dinoServer">
@@ -22,13 +22,6 @@
           <!-- Name -->
           <h4>Name</h4>
           <input type="text" id="dinoName" name="dinoName" />
-          <!-- Species -->
-          <h4>Species</h4>
-          <select name="dinoSpecies" id="dinoSpecies">
-            <option value="null" selected>Select Species</option> 
-            <option value="value2">Argentavis</option>
-            <option value="value3">Dingdongacus</option>
-          </select>
           <!-- Owner -->
           <h4>Owner</h4>
           <input type="text" id="dinoOwner" name="dinoOwner" />
@@ -41,6 +34,9 @@
           <!-- Notes -->
           <h4>Notes</h4>
           <textarea id="dinoNotes" name="dinoNotes"></textarea>
+          <!-- Picture -->
+          <h4>Picture (.jpg only!)</h4>
+          <input type="file" id="dinoPicture" name="dinoPicture" />
           <!-- Submit! -->
           <input type="submit" value="Add Dino">
         </form>
@@ -50,16 +46,17 @@
       <div class="col-sm-12 items">
         <div class="row">
           {{#dinos}}
-            <div class="col-sm-4">
+            <div class="col-sm-12">
               <div class="singleDino darkBox">
-                <div class="name">{{name}}</div>
-                <div class="species">Species: {{species}}</div>
+                <div class="name">{{name}}</div>a
                 <div class="server">Server: {{server}}</div>
                 <div class="owner">Owner: {{owner}}</div>
                 <div class="mortality">Mortality: {{mortality}}</div>
                 <div class="notes">Notes: {{notes}}</div>
                 <div class="added">Added: <span></span></div>
-                <span class="datePop" style="display:none;">{{dateAdded}}</span>
+                <div class="datePop" style="display:none;">{{dateAdded}}</div>
+                <a class="editDino" href="/dinos/{{id}}">Edit</a>
+                <img class="picture" src="/uploads/{{picture}}" />
               </div>
             </div>
           {{/dinos}}

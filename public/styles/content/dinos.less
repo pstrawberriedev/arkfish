@@ -6,7 +6,7 @@
   
   // Dino Page Styling
   //
-  h3 {
+  h1, h3 {
     display:inline-block;
     color:#f0f0f0;
     font-weight:100;
@@ -19,12 +19,31 @@
     color:#f0f0f0;
     
     .singleDino {
-
+      margin-bottom:1em;
+      cursor:default;
+      .picture {
+        margin-top:1em;
+        display:block;
+        max-width:100%;
+        height:auto;
+      }
+      .id {
+        font-size:.5em;
+        color:#333;
+      }
+      .editDino {
+        display:inline-block;
+        padding:.4em 1.5em;
+        font-size:.9em;
+        margin-top:1em;
+        background:rgba(255,255,255,.7);
+        color:#333;
+      }
     }
   }
   
   //Modal
-  #newDino {
+  #newDino, #editDino {
     display:none;
     margin-top:1em;
     color:#fff;
@@ -42,17 +61,21 @@
       padding:.5em .2em;
       color:#333;
     }
+    input[type=file] {color:#f0f0f0}
     textarea {
       min-height:8em;
       margin-bottom:1em;
     }
+  }
+  #editDino {
+    display:block;
   }
   
 }
 
 // Add Dino
 //
-#addDino {
+#addDino, #editDino {
   display:table;
   text-align:center;
   padding:.8em 4em;

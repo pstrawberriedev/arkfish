@@ -58,6 +58,11 @@ $('#addDino').click(function() {
   $('#newDino').slideToggle();
 });
 
+// Single Dino Edit Dino
+$('#editDino').click(function() {
+  $('#newDino').slideToggle();
+});
+
 // Dino Glossary Dates
 $('.singleDino').each(function() {
   var fillDate = $(this).find('.added span');
