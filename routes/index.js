@@ -135,7 +135,7 @@ function getServerInfo() {
     sq.getPlayers(function(err, players){
       if(err) {
         console.log(err);
-        arkInfo.experimental.players = [];
+        arkInfo.experimental.players = "";
       } else {
         //setup players to be array
         arkInfo.experimental.players = [];
