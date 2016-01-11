@@ -52,6 +52,7 @@ $(document).ready(function() {
 $('#cla').click(function() {$('#claInfo').slideToggle(180);});
 $('#van').click(function() {$('#vanInfo').slideToggle(180);});
 $('#uni').click(function() {$('#uniInfo').slideToggle(180);});
+$('#exp').click(function() {$('#expInfo').slideToggle(180);});
 
 // Dino Glossary New Dino
 $('#addDino').click(function() {

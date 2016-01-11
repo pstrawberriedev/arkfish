@@ -13,7 +13,8 @@ var router = express.Router();
 var arkInfo = {};
   arkInfo.unicorn = {},
   arkInfo.classic = {},
-  arkInfo.vanilla = {};
+  arkInfo.vanilla = {}
+  arkInfo.experimental = {};
 
 //Top-Level Function to pull into page GET
 function getServerInfo() {
@@ -115,19 +116,56 @@ function getServerInfo() {
     });
   }
   
+  //Arkfish Experimental
+  function getExperimental() {
+    //Server Info
+    steamServerStatus.getServerStatus(
+      '158.69.202.254', 27015, function(serverInfo) {
+        if (serverInfo.error) {
+          console.log(serverInfo.error);
+          arkInfo.experimental.status = "off";
+        } else {
+          arkInfo.experimental = serverInfo;
+          arkInfo.experimental.status = "on";
+        }
+    });
+    //Player Info
+    var sq = new SourceQuery(1000);
+    sq.open('158.69.202.254', 27015);
+    sq.getPlayers(function(err, players){
+      if(err) {
+        console.log(err);
+        arkInfo.experimental.players = [];
+      } else {
+        //setup players to be array
+        arkInfo.experimental.players = [];
+        var playersArray = arkInfo.experimental.players;
+        //do the loop
+        for (var key in players) {
+          if (players.hasOwnProperty(key)) {
+            var allPlayers = players[key].name;
+            playersArray.push(allPlayers);
+          }
+        }
+      }
+    });
+  }
+  
   //Run the sub-funx lol
   getUnicorn();
   getClassic();
   getVanilla();
+  getExperimental();
   
 }
 
+//158.69.202.254
 //Get Initial Infoz (doesn't actually work. oh.)
 getServerInfo();
 
-//Ghetto cron every 45sec to update server infoz so it doesn't time out
+//Ghetto cron every 55sec to update server infoz so it doesn't time out
 
-new CronJob('*/50 * * * * *', function() {
+new CronJob('*/55 * * * * *', function() {
   getServerInfo();
   console.log('--------------------------');
   console.log('--------Got Info----------');
@@ -142,7 +180,8 @@ router.get('/', function(req, res, next) {
     title: 'Status', 
     unicorn: arkInfo.unicorn,
     classic: arkInfo.classic,
-    vanilla: arkInfo.vanilla
+    vanilla: arkInfo.vanilla,
+    experimental: arkInfo.experimental
   });
 });
 
