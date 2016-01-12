@@ -166,6 +166,17 @@
         <div class="col-sm-12 feature" id="news">
           <div class="darkBox">
             <h4>History</h4>
+						{{#history}}
+						<ul>
+              <li class="date dynamic">
+								<span class="added" style="display:none;">{{date}}</span>
+								<span class="datePop"></span>
+              </li>
+              <li>
+                {{update}}
+              </li>
+            </ul>
+						{{/history}}
             <ul>
               <li class="date">
                 1/11/15
@@ -206,6 +217,13 @@
                 arkfish.net launch...hi!
               </li>
             </ul>
+						<div class="historyForm">
+							<h5>+</h5>
+							<form method="post">
+								<textarea name="update" id="update"></textarea>
+								<input type="submit" value="Post">
+							</form>
+						</div>
           </div>
         </div>
         <!--div class="col-sm-6 feature" id="dinos">

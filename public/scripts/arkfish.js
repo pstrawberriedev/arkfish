@@ -76,3 +76,21 @@ $('.singleDino').each(function() {
   
   fillDate.text(fromDate);
 });
+
+// History Dates
+$('#news .date').each(function() {
+  var fillDate = $(this).find('.datePop');
+  var dateElement = $(this).find('.added');
+  
+  var dateUnformatted = dateElement.text();
+  console.log(dateUnformatted);
+  var relativeDate = moment(dateUnformatted, 'X').format("M/D/YY");
+  var fromDate = moment(dateUnformatted, 'X').fromNow();
+  
+  fillDate.text(relativeDate);
+});
+
+// History Drop
+$('.historyForm h5').on("click touchstart", function() {
+	$('.historyForm form').slideToggle();
+})

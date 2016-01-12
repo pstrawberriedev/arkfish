@@ -2,6 +2,7 @@ var mongoose = require('mongoose');
 var Schema   = mongoose.Schema;
 
 //Dinos
+/*
 var DinoSchema = new Schema({
   server : String,
   name : String,
@@ -13,5 +14,13 @@ var DinoSchema = new Schema({
   picture : String
 });
 var Dino = mongoose.model('dinos', DinoSchema);
+*/
 
-mongoose.connect('mongodb://localhost/arkfish_test1');
+//History
+var HistorySchema = new Schema({
+  date : Number,
+  update : String
+});
+var History = mongoose.model('updates', HistorySchema);
+
+mongoose.connect('mongodb://localhost/arkfish_test2');
