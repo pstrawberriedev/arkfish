@@ -43,7 +43,16 @@ app.engine('html', require('hbs').__express);
 hbs.registerPartials(path.join(__dirname + '/views/partials'));
 // watch
 hbsutils.registerWatchedPartials(path.join(__dirname + '/views/partials'));
-
+// reverse array helper
+hbs.registerHelper('reverse', 
+	function( collection, options ){
+		var result = '';
+		for( var i = collection.length - 1; i >= 0; i-- ){
+			result += options.fn( collection[i] );
+		}
+		return result;
+	}
+);
 
 // Use some shit!
 //~~~~~~~~~~~~~~~~~~~~~~~
