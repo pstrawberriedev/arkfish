@@ -2,24 +2,24 @@
   <section id="pageHome">
     <section class="container-fluid">
       
-      <!-- Unicorn Kingdom -->
+      <!-- josh Kingdom -->
       <!-- Basic -->
-      <section class="row unicorn" id="uni">
+      <section class="row josh" id="uni">
         <div class="col-sm-12 darkBox">
-          <div class="status {{unicorn.status}}"></div>
+          <div class="status {{josh.status}}"></div>
           <div class="drop">
             +
           </div>
-          <h4>Arkfish Unicorn Kingdom&nbsp;
-            <a>({{unicorn.numberOfPlayers}}/{{unicorn.maxNumberOfPlayers}})</a>
-            <span>{{unicorn.serverName}}</span>
+          <h4>Josh.care ARK Server&nbsp;
+            <a>({{josh.numberOfPlayers}}/{{josh.maxNumberOfPlayers}})</a>
+            <span>{{josh.serverName}}</span>
           </h4>
         </div>
       </section>
       <!-- Details -->
       <section class="row" id="uniInfo">
         <div class="col-sm-12 lightBox">
-            {{#unicorn}}
+            {{#josh}}
             <div class="users">
               <span class="typcn typcn-user"></span>
               {{#players}}
@@ -37,134 +37,17 @@
                 Connect&nbsp;
               </a>
             </div>
-            {{/unicorn}}
+            {{/josh}}
         </div>
-      </section><!-- End Unicorn -->
-      
-      <!-- Experimental -->
-      <!-- Basic -->
-      <section class="row experimental" id="exp">
-        <div class="col-sm-12 darkBox">
-          <div class="status {{experimental.status}}"></div>
-          <div class="drop">
-            +
-          </div>
-          <h4>Arkfish Experimental &nbsp;
-            <a>({{experimental.numberOfPlayers}}/{{experimental.maxNumberOfPlayers}})</a>
-            <span>{{experimental.serverName}}</span>
-          </h4>
-        </div>
-      </section>
-      <!-- Details -->
-      <section class="row" id="expInfo">
-        <div class="col-sm-12 lightBox">
-            {{#experimental}}
-            <div class="users">
-              <span class="typcn typcn-user"></span>
-              {{#players}}
-                <div class="user">{{.}}</div>
-              {{/players}}
-            </div>
-            <div class="map">
-              <span class="typcn typcn-map"></span>
-              {{map}}<br />
-              <!--{{time}}-->
-            </div>
-            <div class="connect">
-              <a href="{{connectUrl}}">
-                <span class="typcn typcn-media-play"></span>
-                Connect&nbsp;
-              </a>
-            </div>
-            {{/experimental}}
-        </div>
-      </section><!-- End Experimental -->
-      
-      <!-- Classic -->
-      <!-- Basic -->
-      <section class="row classic" id="cla">
-        <div class="col-sm-12 darkBox">
-          <div class="status {{classic.status}}"></div>
-          <div class="drop">
-            +
-          </div>
-          <h4>
-            Arkfish Classic&nbsp;
-            <span>{{classic.serverName}}</span>
-            <a>({{classic.numberOfPlayers}}/{{classic.maxNumberOfPlayers}})</a>
-          </h4>
-        </div>
-      </section>
-      <!-- Details -->
-      <section class="row active" id="claInfo">
-        <div class="col-sm-12 lightBox">
-            {{#classic}}
-            <div class="users">
-              <span class="typcn typcn-user"></span>
-              {{#players}}
-                <div class="user">{{.}}</div>
-              {{/players}}
-            </div>
-            <div class="map">
-              <span class="typcn typcn-map"></span>
-              {{map}}<br />
-              <!--{{time}}-->
-            </div>
-            <div class="connect">
-              <a href="{{connectUrl}}">
-                <span class="typcn typcn-media-play"></span>
-                Connect&nbsp;
-              </a>
-            </div>
-            {{/classic}}
-        </div>
-      </section><!-- End Classic -->
-      
-      <!-- Vanilla -->
-      <!-- Basic -->
-      <section class="row vanilla" id="van">
-        <div class="col-sm-12 darkBox">
-          <div class="status {{vanilla.status}}"></div>
-          <div class="drop">
-            +
-          </div>
-          <h4>Arkfish Vanilla&nbsp;
-            <span>{{vanilla.serverName}}</span>
-            <a>({{vanilla.numberOfPlayers}}/{{vanilla.maxNumberOfPlayers}})</a>
-          </h4>
-        </div>
-      </section>
-      <!-- Details -->
-      <section class="row" id="vanInfo">
-        <div class="col-sm-12 lightBox">
-            {{#vanilla}}
-            <div class="users">
-              <span class="typcn typcn-user"></span>
-              {{#players}}
-                <div class="user">{{.}}</div>
-              {{/players}}
-            </div>
-            <div class="map">
-              <span class="typcn typcn-map"></span>
-              {{map}}<br />
-              <!--{{time}}-->
-            </div>
-            <div class="connect">
-              <a href="{{connectUrl}}">
-                <span class="typcn typcn-media-play"></span>
-                Connect&nbsp;
-              </a>
-            </div>
-            {{/vanilla}}
-        </div>
-      </section><!-- End Vanilla -->
-      
+      </section><!-- End josh -->
       
       <!-- Start Site Features -->
       <section class="row" id="features">
         <br />
         <div class="col-sm-12 feature" id="news">
+				
           <div class="darkBox">
+					
             <h4>History</h4>
 						{{#reverse history}}
 						<ul>
@@ -177,46 +60,7 @@
               </li>
             </ul>
 						{{/reverse}}
-            <ul>
-              <li class="date">
-                1/11/16
-              </li>
-              <li>
-                Updated Unicorn > 231.8<br />
-              </li>
-            </ul>
-            <ul>
-              <li class="date">
-                1/10/16
-              </li>
-              <li>
-                Updated Unicorn > 231.7
-              </li>
-            </ul>
-            <ul>
-              <li class="date">
-                1/9/16
-              </li>
-              <li>
-                arkfish.net interface lift
-              </li>
-            </ul>
-            <ul>
-              <li class="date">
-                1/7/16
-              </li>
-              <li>
-                Updated Unicorn > 231.5
-              </li>
-            </ul>
-            <ul>
-              <li class="date">
-                1/6/16
-              </li>
-              <li>
-                arkfish.net launch...hi!
-              </li>
-            </ul>
+            
 						<div class="historyForm">
 							<h5>+</h5>
 							<form method="post">
@@ -224,6 +68,7 @@
 								<input type="submit" value="Post">
 							</form>
 						</div>
+						
           </div>
         </div>
         <!--div class="col-sm-6 feature" id="dinos">
