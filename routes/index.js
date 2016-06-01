@@ -28,7 +28,7 @@ function getServerInfo() {
 	});
 	//Player Info
 	var sq = new SourceQuery(1000);
-	sq.open('arkfish.net', 27015);
+	sq.open('ark.josh.care', 27015);
 	sq.getPlayers(function(err, players){
 		if(err) {
 			console.log(err);
