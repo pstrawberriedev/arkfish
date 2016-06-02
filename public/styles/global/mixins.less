@@ -2,7 +2,6 @@
   Mixins
 */
 
-// Weeeeeeee
 .border-radius(@border-radius) {
 	-webkit-border-radius: @border-radius;
 	-moz-border-radius: @border-radius;
@@ -50,6 +49,11 @@
 	-o-transition:@transition;
 	transition:@transition;
 }
+.transform(@transform) {
+  -ms-transform:@transform;
+  -webkit-transform:@transform;
+  transform:@transform;
+}
 .box-shadow (@box-shadow) {
 	-webkit-box-shadow: @box-shadow;
 	-moz-box-shadow: @box-shadow;
@@ -76,23 +80,3 @@
     -webkit-box-sizing: @box-sizing;
     box-sizing: @box-sizing;
 }
-
-
-/* Bootstrap Override Classes */
-.no-lr {padding-left:0; padding-right:0;} // Use on BS Columns
-.no-l {padding-left:0;}
-.no-r {padding-right:0;}
-.no-pull {margin-right:0; margin-left:0;} // Use on BS Rows
-
-/* Dumb Shit */
-h1,h2,h3,h4,h5,ul,li {
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 0;
-}
-.noSelect {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-

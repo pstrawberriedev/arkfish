@@ -1,86 +1,34 @@
 {{> header}}
-  <section id="pageHome">
-    <section class="container-fluid">
+
+  <main id="home" class="container">
+    
+
+    <header>
+       
+      <img class="ark" src="/images/ark.png" />
       
-      <!-- josh Kingdom -->
-      <!-- Basic -->
-      <section class="row josh" id="uni">
-        <div class="col-sm-12 darkBox">
-          <div class="status {{josh.status}}"></div>
-          <div class="drop">
-            +
-          </div>
-          <h4>Josh.care ARK Server&nbsp;
-            <a>({{josh.numberOfPlayers}}/{{josh.maxNumberOfPlayers}})</a>
-            <span>{{josh.serverName}}</span>
-          </h4>
-        </div>
-      </section>
-      <!-- Details -->
-      <section class="row" id="uniInfo">
-        <div class="col-sm-12 lightBox">
-            {{#josh}}
-            <div class="users">
-              <span class="typcn typcn-user"></span>
-              {{#players}}
-                <div class="user">{{.}}</div>
-              {{/players}}
-            </div>
-            <div class="map">
-              <span class="typcn typcn-map"></span>
-              {{map}}<br />
-              <!--{{time}}-->
-            </div>
-            <div class="connect">
-              <a href="{{connectUrl}}">
-                <span class="typcn typcn-media-play"></span>
-                Connect&nbsp;
-              </a>
-            </div>
-            {{/josh}}
-        </div>
-      </section><!-- End josh -->
+      <h1>{{josh.serverName}}</h1>
+      <p>
+        Server is <span class="{{josh.status}}">{{josh.status}}</span>. Now playing {{josh.map}} with {{josh.numberOfPlayers}}/{{josh.maxNumberOfPlayers}} players.<br />
+        <a style="display:block;color:#aaa;margin-top:.3rem;">Last checked at {{updated.date}} MST.</a>
+      </p>
       
-      <!-- Start Site Features -->
-      <section class="row" id="features">
-        <br />
-        <div class="col-sm-12 feature" id="news">
-				
-          <div class="darkBox">
-					
-            <h4>History</h4>
-						{{#reverse history}}
-						<ul>
-              <li class="date dynamic">
-								<span class="added" style="display:none;">{{date}}</span>
-								<span class="datePop"></span>
-              </li> 
-              <li>
-                {{update}}
-              </li>
-            </ul>
-						{{/reverse}}
-            
-						<div class="historyForm">
-							<h5>+</h5>
-							<form method="post">
-								<textarea name="update" id="update"></textarea>
-								<input type="submit" value="Post">
-							</form>
-						</div>
-						
-          </div>
-        </div>
-        <!--div class="col-sm-6 feature" id="dinos">
-          <div class="darkBox">
-            <h4>Latest Dinos</h4><br />
-            coming soon..
-          </div>
-        </div-->
-      </section>
+      <div class="text-center">
+        <a class="connect {{josh.status}}" href="{{josh.connectUrl}}">Connect to server</a>
+      </div>
       
+    </header>
+    
+    <section class="players">
+      
+        {{#josh}}{{#players}}
+        <p>
+          {{.}}
+        </p>
+        {{/players}}{{/josh}}
       
     </section>
-</section>
+    
+  </main>
 
-{{> footer}}
+{{> footer}}    

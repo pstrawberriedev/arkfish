@@ -1,180 +1,60 @@
 /*
   Home Page
-  Namespace: #pageHome
 */
-#pageHome {
+
+#home {
+  background:transparent;
   
-  //
-  // Server Status
-  
-  .map {display:none;}
-  .status {
-    position:absolute;
-    display:block;
-    right:0;
-    top:0;
-    bottom:0;
-    width:5em;
-    height:100%;
-    background-color:rgba(255,180,50,.72);
-    &.on {background-color:rgba(50,255,50,.72);}
-    &.off {background-color:rgba(255,50,50,.72);}
-  }
-  h4 {
-    color:#fff;
-    display:inline-block;
-    font-size:1.4em;
-    margin-left:1.4em;
-    font-weight:100;
-    margin-right:0;
-    span {
-      display:none;
-      position:absolute;
-      right:1.18em;
-      top:1.34em;
-      font-size:.7em;
-    }
-    a {
-      color:#aaa;
-    }
-  }
-  .drop {
-    cursor:pointer;
-    position:absolute;
-    left:0;
-    top:0;
-    padding-top:1.18em;
-    padding-left:.7em;
-    font-weight:bold;
-    bottom:0;
-    width:2em;
-    height:100%;
-    display:inline-block;
-    background:#111;
-    color:#555;
-  }
-  .users, .map {
-    span {font-size:1.2em;}
-  }
-  .users {
-    margin-bottom:10px;
-    @media (min-width:1024px) {
-      padding-right:5.5em;
-    }
-    .user {
-      display:inline-block;
-      padding:.5em;
-      margin:.6em .1em;
-      .border-radius(1px);
-      border:3px solid #444;
-      font-weight:400;
-      .box-shadow(0px 1px 1px 0px rgba(0,0,0,0.05));
-      //background:rgba(200,50,200,.3);
-      font-size:1em;
-      @media (max-width:550px) {font-size:1.2em;}
-    }
-  }
-  .connect {
-    display:inline-block;
-    position:absolute;
-    top:0;
-    right:0;
-    width:5em;
-    font-size:1em;
-    text-align:right;
-    @media (max-width:1024px) {display:none;}
-    a {
-      padding:.2em;
-      display:inline-block;
+    header {
+      margin-left:-15px;
+      margin-right:-15px;
       text-align:center;
-      border-bottom:1px dotted #ddd;
-      border-left:1px dotted #ddd;
-      color:#888;
-    }
-  }
-  
-  //Accordions stuff
-  #claInfo {display:none;}
-  #vanInfo {display:none;}
-  #uniInfo {display:none;}
-  #expInfo {display:none;}
-  
-  //
-  // Site Features
-  
-  #features {
-    .darkBox {
-      cursor:default;
-    }
-    h4 {
-      margin-left:0;
-      margin-bottom:.4em;
-      border-bottom:1px dotted #333;
-    }
-    
-    #news {
-      .lightBox {
-        padding:0;
+      padding:1rem 1rem;
+      margin-bottom:2rem;
+      
+      h1 {
+        margin-bottom:1rem;
+        font-family:@font-thin;
+        font-size:5em;
       }
-      ul {
-        margin-bottom:.6em;
-      }
-      li {
-        font-family:monospace;
-        padding:.5em;
-        display:inline-block;
-        color:#f0f0f0;
-        &.date {
-          background:transparent;
-          color:#eee;
-          background:rgba(255,255,255,.1);
+      
+      p {
+        span {
+          font-family:@font-header;
+          &.up {
+            color:rgba(0,130,0,.7);
+          }
+          &.down {
+            color:rgba(130,0,0,.7);
+          }
         }
       }
-			
-			.historyForm {
-				h5 {
-					font-size:1em;
-					color:#111;
-				}
-				textarea {
-					display:block;
-					width:100%;
-					padding:.3em;
-					font-size:13px;
-					color:#333;
-					background:rgba(255,255,255,.7);
-				}
-				input[type=submit] {
-					border:0;
-					outline:0;
-					color:#333;
-					font-size:13px;
-					background:rgba(255,255,255,.7);
-				}
-				form {
-					display:none;
-				}
-			}
-			
+      
+      .connect {
+        display:none;
+        padding:1rem 3rem;
+        margin:2rem auto;
+        background:rgba(0,130,0,.7);
+        color:@color-light;
+        .shadow-1;
+          &.up {
+            display:inline-block;  
+          }
+      }
+      
     }
-    
-    #dinos {
+  
+    .players {
+      text-align:center;
+        p {
+          display:inline-block;
+          margin:.8rem;
+          padding:.4rem;
+          .border-radius(3px);
+          .shadow-1;
+          border:1px solid #e8e8e8;
+        }
 
     }
-    
-  }
   
 }
-
-  .darkBox {
-    padding:1em;
-    text-align:left;
-    border:1px dotted #111;
-    background:rgba(1,1,1,.9);
-    cursor:pointer;
-    color:#fff;
-  }
-  .lightBox {
-    padding:10px;
-    background:rgba(255,255,255,.7);
-  }

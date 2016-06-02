@@ -2,66 +2,6 @@
   Navigation
 */
 header {
-  width:100%;
-  height:115px;
-  overflow:hidden;
-  font-size:1em;
-  color:#ccc;
-  clear:both;
-  position:absolute;
-  padding:0 8px 0 4px;
-  top:0;
-  left:0;
-  right:0;
+  position:relative;
   display:block;
-  text-align:right;
-  z-index:300;
-  img {
-    position:absolute;
-    left:50%;
-    top:10px;
-    margin-left:-62px;
-    width:124px;
-    height:90px;
-    height:auto;
-    cursor:pointer;
-  }
-}
-
-nav {
-  display:none;
-  position:absolute;
-  left:0;
-  top:0;
-  bottom:0;
-  background:rgba(255,255,255,.93);
-  color:#222;
-  z-index:900;
-  font-size:1.3em;
-  ul {
-    position:relative;
-    display:block;
-    padding-bottom:.4em;
-    &.github {
-      margin-top:.3em;
-      border-bottom:1px solid #999;
-      border-top:1px solid #999;
-    }
-    li {
-      display:block;
-      text-align:left;
-      a {
-        width:100%;
-        padding:.1em .5em;
-        display:block;
-        &:first-child {
-          padding-top:.5em;
-        }
-      }
-    }
-    span {margin-right:.2em;}
-  }
-  @media (max-width:550px) {
-    font-size:2em;
-  }
 }

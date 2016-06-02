@@ -1,0 +1,68 @@
+{{> header}}
+  <section id="home">
+    <section class="container-fluid">
+      
+      <h1>
+        {{josh.serverName}}
+      </h1>
+      
+      <a class="connect" href="{{connectUrl}}">
+        Connect to server
+      </a>
+      
+      <div class="info">
+        
+        <!-- server status -->
+        <div class="map">
+          <span class="status {{josh.status}}"></span>
+          <span>{{josh.map}}</span>
+        </div>
+        
+        
+        <p class="players">
+          {{josh.numberOfPlayers}}/{{josh.maxNumberOfPlayers}} Connected Players:<br />
+          {{#josh}}
+            <div class="users">
+              <span class="typcn typcn-user"></span>
+                {{#players}}
+                  <div class="user">{{.}}</div>
+                {{/players}}
+            </div>
+            <div class="map">
+              <span class="typcn typcn-map"></span>
+              {{map}}<br />
+              <!--{{time}}-->
+            </div>
+            {{/josh}}
+        </p>
+        
+        
+        
+      </div>
+
+      <section class="history">
+        <h2>Updates</h2>
+        <ul>
+          {{#reverse history}}
+              <li class="date dynamic">
+                <span class="added" style="display:none;">{{date}}</span>
+                <span class="datePop"></span>
+              </li> 
+              <li>
+                {{update}}
+              </li>
+          {{/reverse}}
+        </ul>
+      </section>
+    
+    
+      <div class="historyForm" style="display:none;">
+        <form method="post">
+          <textarea name="update" id="update"></textarea>
+          <input type="submit" value="Post">
+        </form>
+      </div>
+        
+</section>
+
+{{> footer}}
