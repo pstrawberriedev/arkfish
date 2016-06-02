@@ -68,6 +68,12 @@ new CronJob('00 */2 * * * *', function() {
   console.log(arkInfo);
 }, null, true, 'America/Denver');
 
+router.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+
 /* GET home page. */
 router.get('/', function(req, res, next) {
 	
