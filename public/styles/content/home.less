@@ -9,13 +9,25 @@
       margin-left:-15px;
       margin-right:-15px;
       text-align:center;
-      padding:1rem 1rem;
+      padding:1rem;
       margin-bottom:2rem;
+        @media (max-width:680px) {
+          padding:.5rem;
+          margin-bottom:1.5rem;
+        }
+      
+      img {
+        max-width: 100%;
+        height:auto;
+      }
       
       h1 {
         margin-bottom:1rem;
         font-family:@font-thin;
         font-size:5em;
+        @media (max-width:680px) {
+          font-size:2.5em;
+        }
       }
       
       p {
