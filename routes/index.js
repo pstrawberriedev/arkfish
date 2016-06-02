@@ -58,8 +58,8 @@ function pushDate() {
 }
 
 //Ghetto cron every 59sec to update server infoz so it doesn't time out
-//new CronJob('00 */2 * * * *', function() {
-new CronJob('*/30 * * * * *', function() {
+new CronJob('00 */2 * * * *', function() {
+//new CronJob('*/30 * * * * *', function() {
   getServerInfo();
   pushDate();
   console.log('--------------------------');
