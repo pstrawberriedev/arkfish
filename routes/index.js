@@ -8,9 +8,9 @@ var router = express.Router();
 
 
 //Set up the objex
-var arkInfo = {},
-    updated = {};
-		arkInfo.josh = {};
+var arkInfo = {};
+    arkInfo.updated = {};
+    arkInfo.josh = {};
     
 
 //Top-Level Function to pull into page GET
@@ -47,16 +47,19 @@ function getServerInfo() {
 }
 
 function pushDate() {
-  var currentDate = Math.floor(Date.now());
-  var toDate = moment(currentDate).format('hh:mma');
-  var nowDate = moment(toDate, 'X').fromNow();
-  updated.date = toDate;
+  var currentDate = moment();
+  var toDate = moment(currentDate).tz("America/Denver").format('MMM Do YYYY hh:mma z');
+  var minutesDate = moment(currentDate).tz("America/Denver").format('hh:mma z');
+  var nowDate = moment(toDate, 'MMM Do hh:mma').fromNow();
+  arkInfo.updated.date = toDate;
+  arkInfo.updated.minutes = minutesDate;
   
-  console.log(updated);
+  console.log(arkInfo.updated);
 }
 
 //Ghetto cron every 59sec to update server infoz so it doesn't time out
-new CronJob('*/59 * * * * *', function() {
+//new CronJob('00 */2 * * * *', function() {
+new CronJob('*/30 * * * * *', function() {
   getServerInfo();
   pushDate();
   console.log('--------------------------');
@@ -72,8 +75,16 @@ router.get('/', function(req, res, next) {
   res.render('home', { 
     title: 'Status', 
     josh: arkInfo.josh,
-    updated: updated
+    updated: arkInfo.updated
   });
+	
+});
+
+/* GET status page. */
+router.get('/status', function(req, res, next) {
+	
+  //Just passing data through to views
+  res.json(arkInfo);
 	
 });
 
