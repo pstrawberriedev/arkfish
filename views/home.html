@@ -5,11 +5,18 @@
 
     <header>
        
-      <img class="ark" src="/images/ark.png" />
+      <img class="ark" src="/images/arksotf.png" />
       
-      <h1>{{josh.serverName}}</h1>
+      <h1>
+        {{josh.serverName}}
+      </h1>
       <p>
-        Server is <span class="{{josh.status}}">{{josh.status}}</span>. Now playing {{josh.map}} with {{josh.numberOfPlayers}}/{{josh.maxNumberOfPlayers}} players.<br />
+        Server is <span class="{{josh.status}}">{{josh.status}}</span>. 
+      </p>
+      <p class="{{josh.status}}">
+        SotF FFA on {{josh.map}} with {{josh.numberOfPlayers}}/{{josh.maxNumberOfPlayers}} players.<br />
+      </p>
+      <p>
         <a style="display:block;color:#aaa;margin-top:.3rem;">Last checked at {{updated.date}}.</a>
       </p>
       
